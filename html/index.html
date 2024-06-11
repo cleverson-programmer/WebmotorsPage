@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>On Wheels</title>
+</head>
+<body>
+    <nav>
+        <div class="container-logo">
+            <img src="/assets/images/on.png" alt="logotype">
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li>
+                    <a href=""> Comprar</a>
+
+                    <ul class="dropdown">
+                            <li>
+                                <a href="#"><img src="/assets/icons/car-icon.svg" alt=""> Usados</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/assets/icons/carros-novos.svg" alt=""> Carros novos</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/assets/icons/moto-icon.svg" alt=""> Motos</a>
+                            </li>
+                            <li><a href="#"><img src="/assets/icons/estrela.svg" alt=""> Outros</a>
+                            </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href=""> Vender</a>
+
+                    <ul class="dropdown">
+                            <li>
+                                <a href="#"><img src="/assets/icons/carro-venda.svg" alt=""> Carro</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/assets/icons/moto-venda.svg" alt=""> Moto</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/assets/icons/moto-venda.svg" alt=""> Meus anúncios</a>
+                            </li>
+                            <li><a href="#"><img src="/assets/icons/estrela.svg" alt=""> Outros</a>
+                            </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href=""> Serviços</a>
+
+                    <ul class="dropdown">
+                            <li>
+                                <a href="#"><img src="/assets/icons/tabela-fipe.svg" alt=""> Tabela FIPE</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/assets/icons/financiamento.svg" alt=""> Financiamentos</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/assets/icons/icon-seguranca.svg" alt=""> Seguros</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/assets/icons/catalogo.svg" alt=""> Catálogos</a>
+                            </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href=""> Ajuda</a>
+
+                    <ul class="dropdown">
+                            <li>
+                                <a href="#"><img src="/assets/icons/icon-user.svg" alt=""> Para você</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/assets/icons/icon-seguranca.svg" alt=""> Segurança</a>
+                            </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-login">
+            <ul>
+                <li>
+                    <a href=""><img src="/assets/icons/user-nav.svg" alt=""></a>
+                </li>
+                <li>
+                    <img src="/assets/icons/coracao.svg" alt="">
+                </li>
+                <li>
+                    <img src="/assets/icons/chat.svg" alt="">
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="content">
+        <aside class="efeito-img" >
+            <img src="/assets/images/hero-car.png" alt="logotype">
+            <h1 class="title-main">On<span> Wheels</span></h1>
+        </aside>
+        
+        <main class="content-form efeito-cadastro" >
+            <h2>Cadastre seu<span> veículo</span> ou procure <span> por carros</span> em nossa página!</h2>
+            <div class="actions">
+                <button type="button"><a href="">Cadastrar seu carro</a></button>
+                <button data-button="" type="button"><a href="">Procurar por carros</a></button>
+            </div>
+            <p>Possui outros tipos de veículos?</p>
+            <a href="">Registre-se em um novo campo de veículos</a>
+        </main>
+    </div>
+
+    <div class="content-input">
+        <aside class="container-img efeito-img-form">
+            <img src="/assets/images/carro.svg" alt="">
+        </aside>
+
+        <section id="register" class="efeito-form">
+            <h3 class="efeito-title-form">Cadastrar novo<span> veículo</span></h3>
+
+            <div class="container-form ">
+                <form data-form="" action="">
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+    
+                    <label for="carro">Marca do veículo:</label>
+                    <select name="carro" id="carro">
+                        <option style="display: none;" value=""></option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="byd">BYD</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="honda">Honda</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="Citroen">Ford</option>
+                    </select>
+    
+                    <label for="modelo">Modelo do veículo:</label>
+                    <input type="text" id="modelo" placeholder="Digite o modelo">
+    
+                    <label for="fipe">Tabela fipe do veículo:</label>
+                    <input type="number" id="fipe" placeholder="Digite a fipe">
+                </form>
+                <div class="container-submit-form">
+                    <button type="button">Registrar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="/js/script.js"></script>
+</html>
