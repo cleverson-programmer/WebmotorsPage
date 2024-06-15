@@ -11,6 +11,10 @@
     --main-button-color: #F13223;
 }
 
+body{
+    background-color: #ECEDF2;
+}
+
 nav{
     display: inline-flex;
     position: fixed;
@@ -34,25 +38,23 @@ nav{
 
 .menu-login ul{
     display: flex;
-    align-items: center;
 }
 
 .menu-login ul li{
-    display: flex;
-    height: 50px;
+    height: 20px;
     cursor: pointer;
     width: 60px;
+    list-style: none;
 }
 
-.nav-menu ul, .menu-login ul{
+.nav-menu ul{
     display: flex;
     list-style: none;
     justify-content: center;
     width:100%;
-    align-items: center;
 }
 
-.nav-menu ul li, .menu-login ul li{
+.nav-menu ul li{
     padding: 10px;
     font-size: 1.3rem;
     font-weight: 600;
@@ -60,7 +62,7 @@ nav{
     position: relative;
 }
 
-.nav-menu ul li a, .menu-login ul li a {
+.nav-menu ul li a{
     position: relative;
     color: #1A2E35;
     text-decoration: none;
@@ -112,8 +114,6 @@ ul.dropdown li a img{
 .nav-menu li:hover ul.dropdown {
     display: block;
 }
-
-
 /* Main / Aside it is Sections */
 .content{
     display: grid;
@@ -125,170 +125,313 @@ ul.dropdown li a img{
     gap: 8.5rem;
 }
 
-main{
-    grid-area: form;
-    margin-top: 10rem;
-}
 
-aside{
-    grid-area: hero;
+/* BALAO DE LOGIN DINAMICO*/
 
-    display: flex;
-    flex-direction: column;
-    margin-top: 10rem;
-}
-
-aside img{
-    width: 500px;
-    height: auto;
-    min-width: 300px;
-}
-
-aside h1{
-    font-size: 6rem;
-    text-align: center;
-}
-
-aside span:only-of-type, .content-form span{
-    color: var(--main-button-color);
-}
-
-.content-form{
-    width: fit-content;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.content-form > h2{
-    font-size: 2rem;
-    text-align: center;
-}
-
-.actions{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-}
-
-.actions button:first-child{
-    background-color: #1A2E35;
-}
-
-[data-button], button:first-child{
-    background-color: var(--main-button-color);
-    margin-top: 50px;
+.box-balloon-login{
+    position: absolute;
+    top: 12%;
+    right: 4%;
+    width: 300px;
+    height: 180px;
+    background-color: white;
+    box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
     border-radius: 10px;
-    padding: 10px 70px; 
+    z-index: 10;
+}
+
+.balloon::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 55%;
+    transform: translateX(-50%);
+    border-width: 0 10px 15px 10px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+  }
+
+  .balloon::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 55%;
+    transform: translateX(-50%);
+    border-width: 0 12px 15px 12px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+  }
+
+.balloon i{
+    font-size: 1.5rem;
+    position: absolute;
+    color: gray;
+    cursor: pointer;
+    width: min-content;
+    left: 89%;
+    top: 5%;
+}
+
+.balloon p{
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+.balloon button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color:#F3123C;
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
     cursor: pointer;
 }
 
-.actions button a{
-    text-decoration: none;
-    font-size: 1.8rem;
-    text-align: center;
-    color: white;
-}
-
-.content-form p{
-    font-size: 1.5rem;
-    margin-top: 50px;
-}
-
-.content-form:last-child{
-    font-size: 1.3rem;
-}
-
-.content-input {
-    display: grid;
-    grid-template-areas: 
-        ". . . . ."
-        ". register . img ."
-        ". register . img ."
-        ". . . . .";
-    gap: 5.5rem;
-}
-
-aside.container-img, .container-img img{
-    grid-area: img;
-    height: 500px;
-}
-
-section#register {
-    grid-area: register;
-    display: flex;
-    flex-direction: column;
-    width: 50rem;
-    justify-content: center;
-}
-
-section {
-    display: flex;
-    
-}
-
-#register h3:first-child {
-    font-size: 2.2rem;
-    text-align: center;
-}
-
-#register h3 span {
-    color: var(--main-button-color);
-}
-
-.container-form {
-    display: inline-block;
-}
-
-.font-text {
-    font-size: 1.5rem;
-}
-
-label {
-    display: block;
-    font-size: 1.5rem;
-    margin-left: 20px;
-    margin-top: 20px;
-    text-transform: uppercase;
-}
-
-input, select {
-    border: 1px solid gray;
-    height: 3rem;
-    width: 90%;
-    justify-content: center;
-    border-radius: 2rem;
-    font-size: 1.5rem;
-    margin-left: 20px;
-}
-
-input::placeholder {
-    display: flex;
-    padding-left: 10px;
-}
-
-select option {
-    font-size: 1.5rem;
+.balloon p:last-child{
     color: gray;
+    text-align: center;
+    font-weight: 600;
 }
 
-.container-submit-form{
+.balloon p span a{
+    color: #F3123C;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+
+/*Carrousel*/
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 1s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    height: 320px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 16px;
 }
 
-.container-form button{
-    width: 90%;
-    height: 40px;
-    border-radius: 2rem;
-    background-color: var(--main-button-color);
-    text-transform: uppercase;
-    color: white;
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* CONTENT SEARCH MAIN*/
+
+.container-search{
+    display: inline-block;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    width: 70%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(46, 45, 55, 0.12) 5px 5px 10px;
+}
+
+.content-options{
+    justify-content:center;
+}
+
+.content-options span{
+    display:inline-block;
+    cursor: pointer;
+}
+
+.content-options span h3,a{
+    margin: 10px;
     font-size: 1.6rem;
-    margin-top: 30px;
+    color: gray;
+    text-decoration: none;
 }
 
-.efeito-cadastro, .efeito-img, .efeito-img-form, .efeito-title-form, .efeito-form, .title-main{
+.content-options span h3:hover, a:hover, h3#comprar-motos:hover{
+    color: black;
+    transition: 0.5s ease;
+}
+
+.content-types{
+    border: 1px solid rgba(230, 228, 228, 0.801) ;
+    display: flex;  
+    align-items: center;
+    width: min-content;
+    height: min-content;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.content-types button{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 80px;
+    height: 45px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.content-types button#type-todos{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.content-types button#type-usados{
+    border-radius: 0px 10px 10px 0px;
+}
+
+.style-button-select{
+    background-color: #F3123C !important;
+    transition: 0.5s ease;
+    color: white;
+}
+
+.content-search{
+    display: flex;
+    border: 1px solid gray;
+    margin-top: 20px;
+    width: 70%;
+    height: 62px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.content-search img{
+    width: 30px;
+    height: auto;
+    margin-left: 5px;
+}
+
+.content-search input{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.button-search a{
+    position: absolute;
+    bottom: 22px;
+    right: 6px;
+    background-color: #F3123C;
+    padding: 18px 45px 18px 45px;
+    border-radius: 15px;
+    color:white;
+    font-weight: 600;
+}
+
+.button-search a:hover{
+    background-color: #C80A2E;
+}
+
+
+/*div-effect-underline*/
+
+.div-effect-underline{
+    height: 3px; 
+    background-color:#F3123C; 
+    width: 135px;
+    display: flex;
+    align-items:end;
+    color: black !important;
+    transition: 0.5s ease-in-out;
+}
+
+/*Container stores*/
+
+#title-section-store{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 100%;
+}
+
+#title-section-store h3{
+    color: #696977;
+    font-size: 2rem;
+}
+
+.section-stores{
+    display: flex;
+    justify-content: center;
+    margin-top: -170px;
+}
+
+.container-stores{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    position: relative;
+    justify-content: center;
+    margin-top: 100vh;
+}
+
+.logotype-car-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.logotype-car-brand img{
+    width: 80px;
+    height: 80px;
+}
+
+/* EFECTS IN THE PAGE*/
+.box-balloon-login, .nav-efects, .carousel, .container-search, #title-section-store, #nissan, #bmw, #toyota, #hyundai{
     visibility: hidden;
 }
+

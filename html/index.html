@@ -10,12 +10,13 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <title>On Wheels</title>
+
+    <title>Web Motors | Compra e venda de veículos financiados e novos</title>
 </head>
 <body>
-    <nav>
+    <nav class="nav-efects">
         <div class="container-logo">
-            <img src="/assets/images/on.png" alt="logotype">
+            <img src="/assets/images/webmotors-design.svg.png" alt="logotype">
         </div>
         <div class="nav-menu">
             <ul>
@@ -92,72 +93,117 @@
         <div class="menu-login">
             <ul>
                 <li>
-                    <a href=""><img src="/assets/icons/user-nav.svg" alt=""></a>
+                    <img src="/assets/icons/user-nav.svg" alt="">
                 </li>
                 <li>
                     <img src="/assets/icons/coracao.svg" alt="">
                 </li>
                 <li>
-                    <img src="/assets/icons/chat.svg" alt="">
+                    <img src="/assets/icons/chat.svg" alt="" id="chatIcon">
                 </li>
             </ul>
         </div>
 
+
     </nav>
-    <div class="content">
-        <aside class="efeito-img" >
-            <img src="/assets/images/hero-car.png" alt="logotype">
-            <h1 class="title-main">On<span> Wheels</span></h1>
-        </aside>
-        
-        <main class="content-form efeito-cadastro" >
-            <h2>Cadastre seu<span> veículo</span> ou procure <span> por carros</span> em nossa página!</h2>
-            <div class="actions">
-                <button type="button"><a href="">Cadastrar seu carro</a></button>
-                <button data-button="" type="button"><a href="">Procurar por carros</a></button>
-            </div>
-            <p>Possui outros tipos de veículos?</p>
-            <a href="">Registre-se em um novo campo de veículos</a>
-        </main>
+
+    <div class="box-balloon-login">
+        <div class="balloon">
+            <i class="fa-solid fa-xmark" id="closeLogin"></i>
+            <p>Faça login para uma experiência ainda melhor! ;)</p>
+            <button type="button">
+                Fazer login
+            </button>
+            <p>Não tem uma conta? <span><a href="#">Criar conta</a></span></p>
+        </div>
     </div>
 
-    <div class="content-input">
-        <aside class="container-img efeito-img-form">
-            <img src="/assets/images/carro.svg" alt="">
-        </aside>
+    <div class="content">
 
-        <section id="register" class="efeito-form">
-            <h3 class="efeito-title-form">Cadastrar novo<span> veículo</span></h3>
-
-            <div class="container-form ">
-                <form data-form="" action="">
-
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
-    
-                    <label for="carro">Marca do veículo:</label>
-                    <select name="carro" id="carro">
-                        <option style="display: none;" value=""></option>
-                        <option value="chevrolet">Chevrolet</option>
-                        <option value="byd">BYD</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="honda">Honda</option>
-                        <option value="toyota">Toyota</option>
-                        <option value="Citroen">Ford</option>
-                    </select>
-    
-                    <label for="modelo">Modelo do veículo:</label>
-                    <input type="text" id="modelo" placeholder="Digite o modelo">
-    
-                    <label for="fipe">Tabela fipe do veículo:</label>
-                    <input type="number" id="fipe" placeholder="Digite a fipe">
-                </form>
-                <div class="container-submit-form">
-                    <button type="button">Registrar</button>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/assets/images/carrousel1.png" alt="Imagem 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/images/carrousel2.png" alt="Imagem 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/images/carrousel3.png" alt="Imagem 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/images/carrousel4.png" alt="Imagem 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/images/carrousel5.png" alt="Imagem 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/images/carrousel6.png" alt="Imagem 3">
                 </div>
             </div>
-        </section>
+            <button class="carousel-control prev" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="carousel-control next" onclick="nextSlide()"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
     </div>
+
+    <div class="container-search">
+        <div class="content-options">
+            <span>
+                <h3 id="comprar-carros">
+                    Comprar carros
+                </h3>
+                <div class=""></div>
+            </span>
+            <span>
+                <h3 id="comprar-motos">
+                    Comprar motos
+                </h3>
+                <div class=""></div>
+            </span>
+            <span>
+                <h3>
+                    <a href="#">Quero vender</a>
+                </h3>
+            </span>
+            <span>
+                <h3>
+                    <a href="#">Quero financiar</a>
+                </h3>
+            </span>
+        </div>
+        <div class="content-types">
+            <button id="type-todos">Todos</button>
+            <button id="type-novos">Novos</button>
+            <button id="type-usados">Usados</button>
+        </div>
+        <div class="content-search">
+                <img src="/assets/icons/lupa.svg" alt="">
+            <input type="text" placeholder="Digite ou modelo do veículo" name="" id="">
+        </div>
+        <div class="button-search">
+            <a href="#">Ver ofertas( 375.419)</a>
+        </div>
+    </div>
+    
+    <div id="title-section-store">
+        <h3>Nossas lojas oficiais</h3>
+    </div>
+    <section class="section-stores">
+        <div class="container-stores">
+            <div class="logotype-car-brand" id="nissan">
+                <img src="/assets/images/nissan.webp_s=fill&w=180&h=180&q=70" alt="">
+            </div>
+            <div class="logotype-car-brand" id="bmw">
+                <img src="/assets/images/bmw.webp_s=fill&w=180&h=180&q=70_s=fill&w=180&h=180&q=70" alt="">
+            </div>
+            <div class="logotype-car-brand" id="toyota">
+                <img src="/assets/images/toyota.webp_s=fill&w=180&h=180&q=70" alt="">
+            </div>
+            <div class="logotype-car-brand" id="hyundai">
+                <img src="/assets/images/hyundai.webp_s=fill&w=180&h=180&q=70" alt="">
+            </div>
+        </div>
+    </section>
 </body>
 <script src="/js/script.js"></script>
 </html>
