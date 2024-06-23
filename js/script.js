@@ -71,8 +71,58 @@ $(document).ready( function(){
         }
     })
 
+    ScrollReveal().reveal('#hatches', {
+        duration: 1000,
+        delay: 500,
+        distance: '180px',
+        origin: 'top'
+    })
+
+    ScrollReveal().reveal('#hatches', {
+        duration: 1000,
+        delay: 500,
+        distance: '180px',
+        origin: 'top'
+    })
+
+    ScrollReveal().reveal('#pickups', {
+        duration: 1000,
+        delay: 1000,
+        distance: '180px',
+        origin: 'top'
+    })
+
+    ScrollReveal().reveal('#sedans', {
+        duration: 1000,
+        delay: 1500,
+        distance: '180px',
+        origin: 'top'
+    })
+
+    ScrollReveal().reveal('#suvs', {
+        duration: 1000,
+        delay: 2000,
+        distance: '180px',
+        origin: 'top'
+    })
+
+    ScrollReveal().reveal('#economicos', {
+        duration: 1000,
+        delay: 2500,
+        distance: '180px',
+        origin: 'top'
+    })
+
+    ScrollReveal().reveal('#arrowNext', {
+        duration: 1000,
+        delay: 2500,
+        distance: '180px',
+        origin: 'top'
+    })
+
 })
 
+//Carrousel main
 document.addEventListener("DOMContentLoaded", function() {
     const carouselInner = document.querySelector('.carousel-inner');
     const carouselItems = document.querySelectorAll('.carousel-item');
@@ -100,6 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(showNextImage, intervalTime);
 }) 
 
+//Form select option
 $(document).ready(function() {
 
     let selectedOption = localStorage.getItem('selectedOption');
@@ -116,6 +167,7 @@ $(document).ready(function() {
     $('#closeLogin').on('click', () => {
         $('.box-balloon-login').hide();
     })
+
 
     // Form search effects select button
     $('#type-todos').on('click', function() {
@@ -156,3 +208,25 @@ $(document).ready(function() {
     })
 
 });
+
+// Initial carrousel Slick
+$(document).ready(function(){
+
+    $('.carrossel').slick({
+        speed: 300,
+        arrow: true,
+        prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+        nextArrow: '<button type="button" class="slick-next" id="arrowNext"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+        infinite:false,
+        slidesToShow: 5,
+        slidesToScroll: 1
+    });
+});
+
+//Show to prev Arrow effect Jquery
+
+$(document).ready(function(){
+    $('#arrowNext').on('click', () =>{
+        $('.slick-prev').css({'visibility' : 'visible'})
+    })
+})

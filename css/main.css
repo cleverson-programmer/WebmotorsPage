@@ -139,6 +139,7 @@ ul.dropdown li a img{
     padding: 20px;
     border-radius: 10px;
     z-index: 10;
+    position: fixed;
 }
 
 .balloon::before {
@@ -383,7 +384,7 @@ input[type="text"]:focus {
 
 /*Container stores*/
 
-#title-section-store{
+.title-section-store{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -393,7 +394,7 @@ input[type="text"]:focus {
     top: 100%;
 }
 
-#title-section-store h3{
+.title-section-store h3{
     color: #696977;
     font-size: 2rem;
 }
@@ -430,8 +431,179 @@ input[type="text"]:focus {
     height: 80px;
 }
 
+/*CARDS CARROUSEL*/
+
+section#container-title-slickCarrousel h3:first-child{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #696977;
+    margin-top: 100px;
+}
+
+.carrossel-container {
+    position:relative;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    cursor: pointer;
+}
+.card {
+    position: relative;
+    display: flex;
+    margin: 10px;
+    max-width: 200px;
+    max-height: 250px;
+    border-radius: 15px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.card img {
+    object-fit: cover;
+}
+.card h3 {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 800;
+    width: 70%;
+}
+
+.slick-prev, .slick-next {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+}
+.slick-prev {
+    left: 10px;
+}
+.slick-next {
+    right: 10px;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 20px;
+    color: black;
+}
+
+.slick-next:hover, .slick-prev:hover{
+    background-color: #fff;
+    opacity: 1;
+}
+
+.fa-arrow-left, .fa-arrow-right{
+    font-size: 1.4rem;
+}
+.your-carousel {
+    overflow: hidden;
+}
+
+
+/*FOOTER*/
+
+#content-primary-footer{
+    display: flex;
+    justify-content: center;
+    background-color: #E11138;
+    height: min-content;
+    padding: 20px 0 20px 0;
+    margin-top: 50px;
+}
+
+#content-primary-footer p, a{
+    color: white;
+    font-size: 1.4rem;
+}
+
+#content-primary-footer a{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.content-main-footer{
+    background-color: #2E2D37;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.footer-comprar{
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+.title-footer-comprar{
+    display: flex;
+    justify-content: center;
+}
+
+.title-footer-comprar p{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-comprar ul{
+    margin-top: 2rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.footer-comprar ul li{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    font-size: 1.3rem;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.footer-comprar ul li:hover{
+    text-decoration: underline;
+}
+
+
+.content-logo-footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #E4002B;
+    padding: 20px 0 20px 0;
+}
+
+.content-logo-footer img{
+    width: 300px;
+}
+
+#content-direitos-reservados{
+    background-color:#2E2D37;
+    padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#content-direitos-reservados p{
+    color: white;
+    font-size: 1.2rem;
+}
+
 /* EFECTS IN THE PAGE*/
-.box-balloon-login, .nav-efects, .carousel, .container-search, #title-section-store, #nissan, #bmw, #toyota, #hyundai{
+.box-balloon-login, .nav-efects, .carousel, .container-search, #title-section-store, #nissan, #bmw, #toyota, #hyundai, #hatches, #pickups, #sedans, #suvs, #economicos,.slick-prev, #arrowNext{
     visibility: hidden;
 }
 
